@@ -1,6 +1,6 @@
 node {
    stage('Preparation') {
-      git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+      git 'https://github.com/89key89/spring-petclinic.git'
    }
    stage('Build') {
         sh './mvnw clean verify'
