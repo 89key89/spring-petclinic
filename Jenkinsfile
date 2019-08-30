@@ -1,10 +1,9 @@
 node {
-   def mvnHome
    stage('Preparation') {
       git 'https://github.com/jglick/simple-maven-project-with-tests.git'
    }
    stage('Build') {
-sh '.\mvnw -Dmaven.test.failure.ignore clean verify'
+        sh './mvnw -Dmaven.test.failure.ignore clean verify'
    }
    stage('Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
