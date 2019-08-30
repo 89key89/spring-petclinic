@@ -9,6 +9,6 @@ sh '.\mvnw -Dmaven.test.failure.ignore clean verify'
    stage('Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.jar'
-      echo 'OMFG IT\'S WORKING'
+      echo 'OMFG IT IS WORKING'
    }
 }
